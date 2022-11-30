@@ -2,7 +2,6 @@ package com.membre.Membre.Entities;
 
 import java.io.Serializable;
 import java.util.Collection;
-import java.util.Date;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
@@ -18,8 +17,8 @@ public class EnseignantChercheur extends Membre  implements Serializable {
         super();
     }
 
-    public EnseignantChercheur(String cin, String nom, String prenom, String cv, String email, String password,
-                               Date date, byte[] photo) {
+    public EnseignantChercheur( String cin, String nom, String prenom, String cv, String email, String password,
+                                Date date, byte[] photo) {
         super( cin, nom, prenom, cv, email, password, date, photo);
         // TODO Auto-generated constructor stub
     }
