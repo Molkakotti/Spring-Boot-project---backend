@@ -4,6 +4,7 @@ import com.membre.Membre.DAO.MembreRepository;
 import com.membre.Membre.Entities.EnseignantChercheur;
 import com.membre.Membre.Entities.Etudiant;
 import com.membre.Membre.Entities.Membre;
+import com.membre.Membre.services.IMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -11,6 +12,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 
 @SpringBootApplication
 public class MembreApplication implements CommandLineRunner {

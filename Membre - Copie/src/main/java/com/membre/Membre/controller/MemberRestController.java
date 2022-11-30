@@ -1,8 +1,11 @@
 package com.membre.Membre.controller;
 
 import com.membre.Membre.Entities.Membre;
+import com.membre.Membre.services.IMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 public class MemberRestController {

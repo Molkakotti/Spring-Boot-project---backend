@@ -1,15 +1,20 @@
 package com.membre.Membre.services;
 
+import com.membre.Membre.DAO.EnseignantChercheurRepository;
+import com.membre.Membre.DAO.EtudiantRepository;
+import com.membre.Membre.DAO.MembreRepository;
 import com.membre.Membre.Entities.EnseignantChercheur;
 import com.membre.Membre.Entities.Etudiant;
 import com.membre.Membre.Entities.Membre;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-public class MemberImpl {
+@Service
+public class MemberImpl implements IMemberService{
     @Autowired
-    MemberRepository memberRepository;
+    MembreRepository memberRepository;
     @Autowired
     EtudiantRepository etudiantRepository;
     @Autowired

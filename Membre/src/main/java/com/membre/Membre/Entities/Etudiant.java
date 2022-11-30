@@ -1,6 +1,6 @@
 package com.membre.Membre.Entities;
 import java.io.Serializable;
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
