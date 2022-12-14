@@ -4,6 +4,8 @@ import com.membre.Membre.DAO.MembreRepository;
 import com.membre.Membre.Entities.EnseignantChercheur;
 import com.membre.Membre.Entities.Etudiant;
 import com.membre.Membre.Entities.Membre;
+import com.membre.Membre.beans.PublicationBean;
+import com.membre.Membre.proxies.PublicationProxyServices;
 import com.membre.Membre.services.IMemberService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -17,6 +19,7 @@ import java.util.Date;
 
 @SpringBootApplication
 @EnableDiscoveryClient
+
 public class MembreApplication implements CommandLineRunner {
 
 	@Autowired
@@ -25,6 +28,8 @@ public class MembreApplication implements CommandLineRunner {
 	@Autowired
 	IMemberService memberService;
 
+	@Autowired
+	PublicationProxyServices publicationProxyServices;
 	public static void main(String[] args) {
 		SpringApplication.run(MembreApplication.class, args);
 	}
@@ -55,6 +60,8 @@ public class MembreApplication implements CommandLineRunner {
 		// Delete a Member
 		memberService.deleteMember(2L); // supprimer la ligne2
 		memberService.affectEtudiantToEnseignant(1L,5L) ;//affecter a un etudiant un encadrant
+
+		//PublicationBean pub = publicationProxyServices.recupererUnePublication
 
 	}
 

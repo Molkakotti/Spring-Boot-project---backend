@@ -1,9 +1,11 @@
 package com.membre.Membre.Entities;
 
+import com.membre.Membre.beans.PublicationBean;
 import org.springframework.lang.NonNull;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Date;
 
 @Entity
@@ -47,6 +49,9 @@ public abstract class Membre implements Serializable {
     @NonNull
     @Temporal(TemporalType.DATE)
     private Date dateNaissance;
+
+    @Transient
+    Collection<PublicationBean> pubs;
 
     public void setCv(@NonNull String cv) {
         this.cv = cv;
